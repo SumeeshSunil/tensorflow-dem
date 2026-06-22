@@ -15,7 +15,7 @@ function App() {
 
     const img = new Image();
     img.src = URL.createObjectURL(file);
-
+    setImage(URL.createObjectURL(file));
     img.onload = async () => {
       try {
         const model = await mobilenet.load();
